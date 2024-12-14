@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "948000587496",
+    "project_id": "flutterdemodb-20a15",
+    "storage_bucket": "flutterdemodb-20a15.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948000587496:android:a3e59fd955df41f8bb935d",
+        "android_client_info": {
+          "package_name": "cn.gatesma.flash_chat_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_9qU9Tq6uFoWXSYKZIy21sRjHZ7DRkFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
