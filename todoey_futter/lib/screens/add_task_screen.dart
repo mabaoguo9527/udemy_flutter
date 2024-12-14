@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoey_futter/model/task_data.dart';
 
-class AddTaskScreen extends StatelessWidget {
-  AddTaskScreen({super.key, required this.callback});
-  final ValueChanged callback;
+class AddTaskScreen extends StatefulWidget {
+  const AddTaskScreen({super.key});
+
+  @override
+  State<AddTaskScreen> createState() => _AddTaskScreenState();
+}
+
+class _AddTaskScreenState extends State<AddTaskScreen> {
+  String? newTaskTile;
 
   @override
   Widget build(BuildContext context) {
-    String? newTaskTile;
-
     return Container(
       color: Color(0xff757575),
       child: Center(
@@ -36,12 +42,15 @@ class AddTaskScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 onChanged: (value) {
                   newTaskTile = value;
+                  print(newTaskTile);
                 },
               ),
               TextButton(
                 onPressed: () {
                   // 按钮点击事件
-                  callback(newTaskTile);
+                  //callback(newTaskTile);
+                  Provider.of<TaskData>(context, listen: false).addTask(newTaskTile!);
+                  Navigator.pop(context);
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10), // 内边距
